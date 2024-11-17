@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    font-family: poppins, sans-serif;
+}
+.card button{
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+.card:hover button{
+    opacity: 1;
+}
