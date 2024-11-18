@@ -7,11 +7,11 @@ const Footer = () => {
   return (
     <div className="w-full relative px-6  bg-[#dbd7d7]">
       <DonateNow></DonateNow>
-      <div className="w-full grid grid-cols-2 pt-[20vh] md:grid-cols-2 lg:grid-cols-4 gap-5 py-10 place-items-start ">
-      <div className="flex flex-col  items-center md:items-start text-center md:text-left ">
+      <div className="w-full grid grid-cols-2 pt-[20vh] md:grid-cols-1 lg:grid-cols-3 gap-5 py-10 place-items-start ">
+      <div className="flex flex-col bg-black  items-center md:items-start text-center md:text-left ">
           {/* <img src="/path/to/logo.png" alt="Quresh Conference Logo" className="h-20 mb-4" /> */}
           <h3 className="text-lg pb-2 font-medium">QURESH CONFERENCE (Regd.)</h3>
-          <p>(A SOCIAL ORGANISATION OF QURESH <br /> COMMUNITY IN INDIA)</p>
+          <p>(A SOCI ORGANISATION OF QURESH <br /> COMMUNITY IN INDIA)</p>
           <div className="text-center md:text-left">
           <div className="flex items-center border rounded-md p-1">
             <input
