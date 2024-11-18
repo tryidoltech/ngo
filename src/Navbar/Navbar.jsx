@@ -34,18 +34,18 @@ const Navbar = () => {
           <NavLink to="/"><li>Home</li></NavLink>
           <NavLink to="/about"><li>About</li></NavLink>
           <Dropdown menu={{ items }} trigger={['click']}>
-            <a onClick={(e) => e.preventDefault()}>
+            <NavLink onClick={(e) => e.preventDefault()}>
               <Space>
                 Governing Body <DownOutlined />
               </Space>
-            </a>
+            </NavLink>
           </Dropdown>
           <Dropdown menu={{ items: programs }} trigger={['click']}>
-            <a onClick={(e) => e.preventDefault()}>
+            <NavLink onClick={(e) => e.preventDefault()}>
               <Space>
                 Programs <DownOutlined />
               </Space>
-            </a>
+            </NavLink>
           </Dropdown>
           <NavLink to="/gallery"><li>Gallery</li></NavLink>
           <NavLink to="/membership"><li>Membership</li></NavLink>
