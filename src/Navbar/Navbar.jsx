@@ -79,18 +79,18 @@ const Navbar = () => {
               <NavLink to="/" onClick={closeDrawer}><li>Home</li></NavLink>
               <NavLink to="/about" onClick={closeDrawer}><li>About</li></NavLink>
               <Dropdown menu={{ items }} trigger={['click']}>
-                <a onClick={(e) => e.preventDefault()}>
+                <NavLink onClick={(e) => e.preventDefault()}>
                   <Space>
                     Governing Body <DownOutlined />
                   </Space>
-                </a>
+                </NavLink>
               </Dropdown>
               <Dropdown menu={{ items: programs }} trigger={['click']}>
-                <a onClick={(e) => e.preventDefault()}>
+                <NavLink onClick={(e) => e.preventDefault()}>
                   <Space>
                     Programs <DownOutlined />
                   </Space>
-                </a>
+                </NavLink>
               </Dropdown>
               <NavLink to="/gallery" onClick={closeDrawer}><li>Gallery</li></NavLink>
               <NavLink to="/membership" onClick={closeDrawer}><li>Membership</li></NavLink>

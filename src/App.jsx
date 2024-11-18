@@ -18,22 +18,19 @@ function App() {
   return (
     <>
     <Routes>
-
-     <Route exact path="/" element={<Home></Home>} />
-     <Route exact path="/about" element={<About></About>} />
-     <Route exact path="/office" element={<OfficeBearers></OfficeBearers>} />
-     <Route exact path="/governing" element={<GoverningCommunity></GoverningCommunity>} />
-     <Route exact path="/saleem" element={<SaleemProfile></SaleemProfile>} />
-     <Route exact path="/sanobar" element={<SanobarProfile></SanobarProfile>} />
-     <Route exact path="/moin" element={<MoinProfile></MoinProfile>} />
-     <Route exact path="/mohd" element={<MohdProfile></MohdProfile>} />
-     <Route exact path="/guidance" element={<EducationGudiance></EducationGudiance>} />
-     <Route exact path="/skill" element={<SkillDevelopment></SkillDevelopment>} />
-     <Route exact path="/scholarship" element={<Scholarship></Scholarship>} />
-     <Route exact path="/quresh" element={<Quresh></Quresh>} />
+     <Route  path="/" element={<Home></Home>} />
+     <Route  path="/about" element={<About></About>} />
+     <Route  path="/office" element={<OfficeBearers></OfficeBearers>} />
+     <Route  path="/governing" element={<GoverningCommunity></GoverningCommunity>} />
+     <Route  path="/saleem" element={<SaleemProfile></SaleemProfile>} />
+     <Route  path="/sanobar" element={<SanobarProfile></SanobarProfile>} />
+     <Route  path="/moin" element={<MoinProfile></MoinProfile>} />
+     <Route  path="/mohd" element={<MohdProfile></MohdProfile>} />
+     <Route  path="/guidance" element={<EducationGudiance></EducationGudiance>} />
+     <Route  path="/skill" element={<SkillDevelopment></SkillDevelopment>} />
+     <Route  path="/scholarship" element={<Scholarship></Scholarship>} />
+     <Route  path="/quresh" element={<Quresh></Quresh>} />
     </Routes>
-
-
     </>
   )
 }

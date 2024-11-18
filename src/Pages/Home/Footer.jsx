@@ -5,7 +5,7 @@ const Footer = () => {
 
 
   return (
-    <div className="w-full relative px-6  bg-[#474a82]">
+    <div className="w-full relative px-6  bg-[#dbd7d7]">
       <DonateNow></DonateNow>
       <div className="w-full grid grid-cols-2 pt-[20vh] md:grid-cols-2 lg:grid-cols-4 gap-5 py-10 place-items-start ">
       <div className="flex flex-col  items-center md:items-start text-center md:text-left ">
