@@ -1,46 +1,49 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
 import { MdOutlineMenu } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 
-const items = [
-  { label: <a href="/office">Office Bearers</a>, key: '0' },
-  { label: <a href="/governing">Governing Community</a>, key: '1' },
-  { type: 'divider' },
+const governingItems = [
+  { label: "Office Bearers", path: "/office" },
+  { label: "Governing Community", path: "/governing" },
 ];
 
-const programs = [
-  { label: <a href="/guidance">Education Guidance</a>, key: '0' },
-  { label: <a href="/skill">Skill Development</a>, key: '1' },
-  { label: <a href="/scholarship">Scholarship</a>, key: '2' },
-  { label: <a href="/quresh">Quresh Matrimony</a>, key: '3' },
-  { type: 'divider' },
+const programItems = [
+  { label: "Education Guidance", path: "/guidance" },
+  { label: "Skill Development", path: "/skill" },
+  { label: "Scholarship", path: "/scholarship" },
+  { label: "Quresh Matrimony", path: "/quresh" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
   const closeDrawer = () => setIsOpen(false);
+
+  const createMenuItems = (items) =>
+    items.map((item, index) => ({
+      key: index,
+      label: <NavLink to={item.path} onClick={closeDrawer}>{item.label}</NavLink>,
+    }));
 
   return (
     <div className="w-full max-md:w-full bg-blue-200">
-      <div className="flex max-md:justify-end   justify-center gap-10 items-center py-6 px-4">
+      <div className="flex max-md:justify-end justify-center gap-10 items-center py-6 px-4">
         {/* Desktop Navigation */}
-        <ul className="max-md:hidden flex-wrap md:flex  items-center gap-6 text-[15px]">
+        <ul className="max-md:hidden flex-wrap md:flex items-center gap-6 text-[15px]">
           <NavLink to="/"><li>Home</li></NavLink>
           <NavLink to="/about"><li>About</li></NavLink>
-          <Dropdown menu={{ items }} trigger={['click']}>
+          <Dropdown menu={{ items: createMenuItems(governingItems) }} trigger={['click']}>
             <NavLink onClick={(e) => e.preventDefault()}>
               <Space>
                 Governing Body <DownOutlined />
               </Space>
             </NavLink>
           </Dropdown>
-          <Dropdown menu={{ items: programs }} trigger={['click']}>
+          <Dropdown menu={{ items: createMenuItems(programItems) }} trigger={['click']}>
             <NavLink onClick={(e) => e.preventDefault()}>
               <Space>
                 Programs <DownOutlined />
@@ -57,11 +60,9 @@ const Navbar = () => {
         </button>
 
         {/* Mobile Navigation */}
-        <div className=''>
         <button className="md:hidden" onClick={toggleMenu}>
           <MdOutlineMenu size={24} />
         </button>
-        </div>
       </div>
 
       {/* Sidebar */}
@@ -78,14 +79,14 @@ const Navbar = () => {
             <ul className="flex flex-col gap-4 text-lg">
               <NavLink to="/" onClick={closeDrawer}><li>Home</li></NavLink>
               <NavLink to="/about" onClick={closeDrawer}><li>About</li></NavLink>
-              <Dropdown menu={{ items }} trigger={['click']}>
+              <Dropdown menu={{ items: createMenuItems(governingItems) }} trigger={['click']}>
                 <NavLink onClick={(e) => e.preventDefault()}>
                   <Space>
                     Governing Body <DownOutlined />
                   </Space>
                 </NavLink>
               </Dropdown>
-              <Dropdown menu={{ items: programs }} trigger={['click']}>
+              <Dropdown menu={{ items: createMenuItems(programItems) }} trigger={['click']}>
                 <NavLink onClick={(e) => e.preventDefault()}>
                   <Space>
                     Programs <DownOutlined />
