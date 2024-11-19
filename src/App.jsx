@@ -12,6 +12,9 @@ import EducationGudiance from './Pages/Programs/EducationGudiance'
 import SkillDevelopment from './Pages/Programs/SkillDevelopment'
 import Scholarship from './Pages/Programs/Scholarship'
 import Quresh from './Pages/Programs/Quresh'
+import Membership from './Pages/Membership'
+import ContactUs from './Pages/ContactUs'
+import PhotoGallery from './Pages/Gallery'
 
 function App() {
 
@@ -30,6 +33,9 @@ function App() {
      <Route  path="/skill" element={<SkillDevelopment></SkillDevelopment>} />
      <Route  path="/scholarship" element={<Scholarship></Scholarship>} />
      <Route  path="/quresh" element={<Quresh></Quresh>} />
+     <Route  path="/membership" element={<Membership></Membership>} />
+     <Route  path="/contact" element={<ContactUs></ContactUs>} />
+     <Route  path="/gallery" element={<PhotoGallery></PhotoGallery>} />
     </Routes>
     </>
   )

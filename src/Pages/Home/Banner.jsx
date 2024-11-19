@@ -31,10 +31,10 @@ const Banner = () => {
       <span><IoIosArrowDropleft size={40} color="#ffff" /></span>
       </div>
       <div className="text-center">
-        <h1 className="text-white text-6xl max-md:text-2xl">
+        <h1 className="text-white text-6xl max-md:text-xl">
           Reimagine the Future <br /> of Education
         </h1>
-        <p className="text-white max-md:text-xs">
+        <p className="text-white max-md:hidden max-md:text-xs">
           Lorem  Temporibus usantium eum.
         </p>
       </div>

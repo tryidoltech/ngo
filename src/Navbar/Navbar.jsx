@@ -31,8 +31,12 @@ const Navbar = () => {
 
   return (
     <div className="w-full max-md:w-full bg-blue-200">
-      <div className="flex max-md:justify-end justify-center gap-10 items-center py-6 px-4">
+        
+      <div className="flex max-md:justify-between justify-center gap-10 items-center py-6 px-4">
         {/* Desktop Navigation */}
+        <div >
+          <img src="logo.png" alt="" className='h-10' />
+        </div>
         <ul className="max-md:hidden flex-wrap md:flex items-center gap-6 text-[15px]">
           <NavLink to="/"><li>Home</li></NavLink>
           <NavLink to="/about"><li>About</li></NavLink>

@@ -1,63 +1,45 @@
-import Dashboard from '../Governing Body/MoinProfile';
-import Footer from '../Home/Footer';
-import Navbar from '../../Navbar/Navbar';
+import Navbar from "../../Navbar/Navbar";
+import Footer from "../../Pages/Home/Footer"; // Adjust the path to your Navbar component
+import { MohdAashqeenQureshi } from "../../../data/Data"; // Adjust the path to your data file
 
-const MohdProfile = () => {
-  const profiles = [
-    {
-      name: "Mohd Aashqeen Qureshi",
-      title: "Secretary",
-      image: "bearer-3.png",
-      contact: {
-        email: "email123@gmail.com",
-        phone: "+91 9876543210",
-      },
-      description:
-        "I am Sanobar Ali Qureshi, Advocate practicing in Supreme Court of India. I am also the National President, Quresh Conference Regd.",
-      posts: [
-        "I did my B.A. Honors (Psychology) in 1993 and Law in 1996 from Aligarh Muslim University and Completed my LLM in 2023 from Chaudhary Charan Singh University, Meerut",
-        "I am associated with several organizations and discharging functions in various capacities and hold various posts like General Sec. in Law Society during 1994-1995",
-        "I was president of Indian Lawyers Association, Delhi Unit, National President of 80% OBC Muslim Adhikar Federation",
-        "Ex-District President, AIJQ in the year 2007",
-      ],
-    }
-  ];
+const SanobarProfile = () => {
+  // Destructuring data from the imported `MohdAashqeenQureshi` object
+  const { name, title, contact, bio, otherPosts } = MohdAashqeenQureshi;
 
   return (
     <div className="w-full">
-      <Navbar></Navbar>
-      <div className="w-full flex flex-col items-center bg-white">
-        {profiles.map((profile, index) => (
-          <div key={index} className="w-full px-24 py-10 gap-5 flex">
-            <div className="w-[300px]">
-              <img src={profile.image} alt={`${profile.name} profile`} />
-              <h1 className="text-2xl font-semibold text-start">{profile.name}</h1>
-              <h5 className="text-start font-semibold">{profile.title}</h5>
-              <div className="h-[100px] leading-8 mt-10">
-                <h6 className="text-lg font-medium text-start">Contact Us</h6>
-                <p className="text-start">{profile.contact.email}</p>
-                <p className="text-start">{profile.contact.phone}</p>
-              </div>
-            </div>
-            <div className="w-[900px] text-start p-3">
-              <div className="text-md">
-                <p>{profile.description}</p>
-                <h1 className="mt-5 font-bold text-[24px]">Other Posts:</h1>
-                {profile.posts.map((post, postIndex) => (
-                  <p key={postIndex} className="flex mt-3">
-                    <img className="w-3 mr-3 mt-[6px] h-3" src="dot.png" alt="bullet point" />
-                    {post}
-                  </p>
-                ))}
-              </div>
+      <Navbar />
+      <div className="w-full min-h-screen py-10 flex bg-white">
+        <div className="w-full px-24 max-md:px-10 py-20 max-md:flex-col flex">
+          <div className="min-w-[18vw] max-md:w-full">
+            <img
+              className="w-[15vw] max-md:w-full"
+              src="bearer-3.png"
+              alt={`${name}'s Profile`}
+            />
+            <h1 className="text-xl font-semibold py-2">{MohdAashqeenQureshi.name}</h1>
+            <h5 className="italic text-gray-600">{MohdAashqeenQureshi.title}</h5>
+            <div className="leading-8 py-2 mt-6">
+              <h6 className="text-sm font-semibold">Contact:</h6>
+              <p className="py-2 text-sm">{contact.email}</p>
+              <p className="text-sm">{contact.phone}</p>
             </div>
           </div>
-        ))}
+
+          <div className="ml-10 max-md:ml-0">
+            <p className="text-lg">{bio}</p>
+            <h1 className="mt-5 font-bold text-xl">Other Posts:</h1>
+            <ul className="list-disc marker:text-2xl  leading-relaxed mt-3">
+              {otherPosts.map((post, index) => (
+                <li key={index}>{post}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
-      <Dashboard></Dashboard>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };
 
-export default MohdProfile;
+export default SanobarProfile;

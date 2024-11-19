@@ -20,7 +20,7 @@ const OfficeBearers = () => {
     <div className='w-full  max-md:flex  flex items-center  '>
         <div className='w-full  max-md:flex-wrap justify-center items-center   gap-10 flex'>
             <div className='card'>
-                <img src="bearer-1.png" alt=""  className=''/>
+                <img src="bearer1.png" alt=""  className=''/>
                 <h1 className='text-lg font-semibold 	'>Sanobar Ali Qureshi</h1>
                 <h5>President</h5>
                 <NavLink to="/sanobar">

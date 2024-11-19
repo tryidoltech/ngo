@@ -6,8 +6,9 @@ import Showcase from "./Showcase";
 import RecentCauses from "./RecentCauses";
 import Page2 from "./Page2";
 import Footer from "./Footer";
-// import Dashboard from "./Dashboard";
+import Dashboard from "./Dashboard";
 import DonateNow from "../../component/DonateNow";
+import SwiperCards from "../../component/SwiperCards";
 
 const Home = () => {
   return (
@@ -19,9 +20,11 @@ const Home = () => {
         <Page1></Page1>
         <Showcase></Showcase>
        <RecentCauses></RecentCauses>
-        <Page2></Page2>
-        {/* <Dashboard></Dashboard> */}
-        <DonateNow></DonateNow>
+        {/* <Page2></Page2> */}
+        
+        <SwiperCards></SwiperCards>
+        {/* <DonateNow></DonateNow> */}
+        <Dashboard></Dashboard>
        <Footer></Footer>
     </div>
   );
