@@ -14,7 +14,7 @@ const SanobarProfile = () => {
           <div className="min-w-[18vw] max-md:w-full">
             <img
               className="w-[15vw] max-md:w-full"
-              src="bearer-1.png"
+              src="bearer1.png"
               alt={`${name}'s Profile`}
             />
             <h1 className="text-xl font-semibold py-2">{sanobarAliQureshi.name}</h1>

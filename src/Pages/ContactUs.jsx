@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-// import Footer from "../Footer";
-// import Dashboard from "../Dashboard";
+import Footer from "../Pages/Home/Footer";
+import Dashboard from "../Pages/Home/Dashboard";
 
 const ContactUs = () => {
   return (
@@ -18,7 +18,7 @@ const ContactUs = () => {
             <h1 className=" text-5xl font-semibold">Contact Us</h1>
           </div>
         </div>
-        <div className="mb-10">
+        <div className="">
           <div className="bg-[#eaebfe] px-24 max-md:px-0 py-20 ">
             <div className="px-4">
             
@@ -74,15 +74,19 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="mt-10  bg-white py-10">
-              <div className="max-w-4xl mx-auto px-4">
-                <h2 className="text-2xl text-center font-bold text-gray-800 mb-6">
+            <div className="mt-10  px-10 bg-white py-10">
+              <div className=" px-20 max-md:px-2 ">
+                <div className=" w-[75vw] max-md:w-full  flex justify-center items-center flex-col ">
+               <div className="w-[30vw] max-md:w-full ">
+               <h2 className="text-2xl text-center font-bold text-gray-800 mb-6">
                   Get in touch
                 </h2>
                 <p className="text-gray-600 mb-8 text-center">
                   Our team is happy to address all your queries. Fill out the
                   form and we will be in touch with you as soon as we can.
                 </p>
+               </div>
+                </div>
                 <form className="grid  grid-cols-2 gap-6">
                   <div>
                     <label
@@ -166,8 +170,8 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
-          {/* <Dashboard></Dashboard> */}
-          {/* <Footer></Footer> */}
+          <Dashboard></Dashboard>
+          <Footer></Footer>
         </div>
       </div>
     </div>
