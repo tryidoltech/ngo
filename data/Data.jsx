@@ -3,6 +3,7 @@ import user1 from "../src/assets/bearer1.png"
 import user2 from "../public/bearer-2.png"
 import user3 from "../public/bearer-3.png"
 import user4 from "../public/bearer-4.png"
+import image1 from "../public/dot.png"
 
 
 
@@ -116,6 +117,13 @@ export const peopleData = [
     image:user4,
   },
 ];
+
+export const images = [
+  {Image1: user1}
+]
+  
+  
+
 
   
   

@@ -1,88 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-// import Dashboard from "../Dashboard";
-// import Footer from "../Footer";
+import Dashboard from "../Pages/Home/Dashboard";
+import Footer from "../Pages/Home/Footer";
+import GalleryNav from "../Navbar/GalleryNav";
+import PhotoGallery from "./gallery/PhotoGallery";
+import VideoGallery from "./gallery/Videogallery";
+import Media from "./gallery/Media";
+import SuccessStories from "./gallery/SuccessStories";
 
-const PhotoGallery = () => {
-  const cards = [
-    {
-      image: "photo1.png",
-    },
-    {
-      image: "photo2.png",
-    },
-    {
-      image: "photo3.png",
-    },
-    {
-      image: "photo4.png",
-    },
-    {
-      image: "photo5.png",
-    },
-    {
-      image: "photo6.png",
-    },
-    {
-      image: "photo7.png",
-    },
-    {
-      image: "photo8.png",
-    },
-    {
-      image: "photo9.png",
-    },
-
-  ];
+const Gallery = () => {
+  const [selectedGallery, setSelectedGallery] = useState("photo"); // Default to Photo Gallery
 
   return (
     <div className="overflow-hidden">
       <Navbar />
       <div
-        className="w-full h-[322px] bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(governing.png)` }}
+        className="w-full min-h-[50vh] md:min-h-[60vh] bg-black bg-center bg-cover flex items-center justify-center"
       >
-        <div className="text-white leading-10 text-center pt-12 h-[200px]">
-          <p>Home / Gallery</p>
-          <h1 className="text-5xl text-center font-semibold">Photo Gallery</h1>
+        <div className="text-white text-center">
+          <p className="text-sm md:text-base">Home / Gallery</p>
+          <h1 className="text-3xl md:text-5xl font-semibold">
+          <h1 className="text-3xl md:text-5xl font-semibold">
+  {selectedGallery === "photo" && "Photo Gallery"}
+  {selectedGallery === "video" && "Video Gallery"}
+  {selectedGallery === "media" && "Media"}
+  {selectedGallery === "SuccessStories" && "Success Stories"}
+</h1></h1>
         </div>
       </div>
-      <div className="w-full bg-slate-500 px-24">
-        <div className="flex">
-          <ul className="flex bg-black">
-            <li className="text-white text-xl font-normal">Photo Gallery</li>
-            <li className="text-white text-xl font-normal mx-4">
-              Video Gallery
-            </li>
-            <li className="text-white text-xl font-normal mx-4">Media</li>
-            <li className="text-white text-xl font-normal mx-4">
-              Success Stories
-            </li>
-          </ul>
-        </div>
-        <div>
-          <div className="flex gap-10">
-            {cards.map((card, index) => (
-              <div
-                key={index}
-                className=" gap-4 w-[240px] h-[400px]"
-              >
-                <div className="text-black">
-                  <img
-                    src={card.image}
-                    alt={`Card image ${index + 1}`}
-                    className="w-full"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+
+      <div className="py-14 px-24 max-md:px-5  max-md:w-full ">
+        {/* Pass selectedGallery state and setter to GalleryNav */}
+        <GalleryNav
+          selected={selectedGallery}
+          onSelect={setSelectedGallery}
+        />
       </div>
-      {/* <Dashboard /> */}
-      {/* <Footer /> */}
+
+      <div className="w-full px-4 md:px-24">
+        {/* Conditionally render the content */}
+        {selectedGallery === "photo" && <PhotoGallery></PhotoGallery>}
+        {selectedGallery === "video" && <VideoGallery></VideoGallery>}
+        {selectedGallery === "media" && <Media></Media>}
+        {selectedGallery === "SuccessStories" && <SuccessStories></SuccessStories>}
+      </div>
+
+      <Dashboard />
+      <Footer />
     </div>
   );
 };
 
-export default PhotoGallery;
+export default Gallery;

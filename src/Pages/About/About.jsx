@@ -3,6 +3,7 @@ import Showcase from '../Home/Showcase'
 import Dashboard from '../Home/Dashboard'
 import Footer from '../Home/Footer'
 import Page3 from './Page3'
+import VisionCard from '../../component/VisionCard'
 
 const About = () => {
   return (
@@ -21,9 +22,7 @@ const About = () => {
     {/* <Page1></Page1> */}
     < Page3></Page3>
     <Showcase></Showcase>
-    <div className=' px-24 py-8'>
-      <img src="Frame 1149.png" alt="" className='max-md:w-[50vh]' />
-    </div>
+    <VisionCard></VisionCard>
 
   <Dashboard></Dashboard>
   <Footer></Footer>

@@ -14,7 +14,9 @@ import Scholarship from './Pages/Programs/Scholarship'
 import Quresh from './Pages/Programs/Quresh'
 import Membership from './Pages/Membership'
 import ContactUs from './Pages/ContactUs'
-import PhotoGallery from './Pages/Gallery'
+import Gallery from './Pages/Gallery'
+import PhotoGallery from './Pages/gallery/PhotoGallery'
+// import Videogallery from './Pages/gallery/Videogallery'
 
 function App() {
 
@@ -35,7 +37,11 @@ function App() {
      <Route  path="/quresh" element={<Quresh></Quresh>} />
      <Route  path="/membership" element={<Membership></Membership>} />
      <Route  path="/contact" element={<ContactUs></ContactUs>} />
-     <Route  path="/gallery" element={<PhotoGallery></PhotoGallery>} />
+     <Route  path="/photo" element={<PhotoGallery></PhotoGallery>} />/
+     <Route path='/gallery' element={<Gallery></Gallery>}>
+     {/* <Route path='gallery/videogallery' element={<Videogallery></Videogallery>}> </Route> */}
+     </Route>
+     
     </Routes>
     </>
   )
