@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <div className="w-full max-md:w-full bg-blue-200">
         
-      <div className="flex max-md:justify-between justify-center gap-40 items-center py-6 px-4">
+      <div className="flex max-md:justify-between justify-center gap-28 items-center py-6 px-4">
         {/* Desktop Navigation */}
         <div >
           <img src="logo.png" alt="" className='h-10' />
