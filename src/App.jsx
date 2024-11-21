@@ -16,6 +16,7 @@ import Membership from './Pages/Membership'
 import ContactUs from './Pages/ContactUs'
 import Gallery from './Pages/Gallery'
 import PhotoGallery from './Pages/gallery/PhotoGallery'
+import Donate from './Pages/Donate'
 // import Videogallery from './Pages/gallery/Videogallery'
 
 function App() {
@@ -38,9 +39,11 @@ function App() {
      <Route  path="/membership" element={<Membership></Membership>} />
      <Route  path="/contact" element={<ContactUs></ContactUs>} />
      <Route  path="/photo" element={<PhotoGallery></PhotoGallery>} />/
-     <Route path='/gallery' element={<Gallery></Gallery>}>
+     <Route path="/gallery" element={<Gallery></Gallery>}>
+     
      {/* <Route path='gallery/videogallery' element={<Videogallery></Videogallery>}> </Route> */}
      </Route>
+     <Route path="/donate" element={<Donate></Donate>}></Route>
      
     </Routes>
     </>

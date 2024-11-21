@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <div className="w-full max-md:w-full bg-blue-200">
         
-      <div className="flex max-md:justify-between justify-center gap-10 items-center py-6 px-4">
+      <div className="flex max-md:justify-between justify-center gap-40 items-center py-6 px-4">
         {/* Desktop Navigation */}
         <div >
           <img src="logo.png" alt="" className='h-10' />
@@ -59,9 +59,11 @@ const Navbar = () => {
           <NavLink to="/reports"><li>Annual Reports</li></NavLink>
           <NavLink to="/contact"><li>Contact Us</li></NavLink>
         </ul>
+        <NavLink to="/donate">
         <button className="hidden md:block bg-blue-500 text-white px-5 py-2 rounded-md">
           Donate Now
         </button>
+        </NavLink>
 
         {/* Mobile Navigation */}
         <button className="md:hidden" onClick={toggleMenu}>
@@ -102,9 +104,11 @@ const Navbar = () => {
               <NavLink to="/reports" onClick={closeDrawer}><li>Annual Reports</li></NavLink>
               <NavLink to="/contact" onClick={closeDrawer}><li>Contact Us</li></NavLink>
             </ul>
-            <button className="w-full bg-blue-500 text-white py-2 mt-6 rounded-md">
+           <NavLink to="/donate">
+           <button className="w-full bg-blue-500 text-white py-2 mt-6 rounded-md">
               Donate Now
             </button>
+           </NavLink>
           </div>
         </div>
       )}
