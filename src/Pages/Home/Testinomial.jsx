@@ -3,11 +3,11 @@ import { peopleData } from "../../../data/Data";
 
 const Testimonial = () => {
   return (
-    <div className="flex flex-wrap justify-center max-md:gap-[4rem] gap-5 pb-10 max-md:px-20 min-h-[40vh]">
+    <div className="flex flex-wrap justify-center max-md:gap-[4rem] gap-5 pt-20 pb-10 max-md:px-10  min-h-[0vh]">
       {peopleData.map((person, index) => (
         <div
           key={index}
-          className="relative bg-[#f5f5f5] w-[18vw] h-[28vh] max-md:w-full  rounded-2xl shadow-md flex flex-col items-center p-6"
+          className="relative bg-[#f5f5f5] w-[18vw] h-[30vh] max-md:w-full  rounded-2xl shadow-md flex flex-col items-center p-6"
         >
           {/* Placeholder for Image */}
           <div className="absolute -top-12 w-[7rem] h-[7rem] rounded-full overflow-hidden shadow-lg">
