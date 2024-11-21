@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 const DonateNow = () => {
   return (
     <div className=''>
-       <div className=" h-full w-full   flex justify-center items-center ">
-        <div className=" absolute ">
+       <div className=" h-full w-full  relative  flex justify-center items-center ">
+        <div className=" absolute bottom-[-3rem]  ">
 
 <div className='h-full w-full  relative  flex justify-center items-center'>
 <img src="/Footerframe.png" alt="" className='h-[30vh] w-[90vw] max-md:h-[20vh]' />

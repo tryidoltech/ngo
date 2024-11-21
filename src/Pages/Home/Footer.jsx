@@ -1,83 +1,85 @@
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaPhone } from "react-icons/fa";
 import DonateNow from "../../component/DonateNow";
 
 const Footer = () => {
-
-
   return (
-    <div className="w-full relative px-6  bg-[#eaebfe]">
+    <footer className="bg-[#F5F5F5] text-black py-10">
       <DonateNow></DonateNow>
-      <div className=" flex max-md:flex-col md:shrink-0  min-h-[80vh]  justify-center items-center ">
-      <div className="flex flex-col    items-center md:items-start  m  ">
-         <div className="max-md:w-full">
-         <img src="logo.png" alt="Quresh Conference Logo" className=" m" />
-          <p>
-          At Shiny Interiors, we blend elegance and functionality to create stunning residential and commercial interiors. Our experienced design specialists focus on delivering exceptional customer satisfaction through streamlined operations.
-          </p>
-         </div>
-          <div className="text-center md:text-left">
-          {/* <div className="flex   items-center border rounded-md p-1">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="px-4 py-2 max-md:w-[50vw] outline-none "
-            />
-            <button className="bg-[#4f46e5] text-white px-4 py-2 rounded-md">
-              Subscribe
-            </button>
-          </div> */}
-          
-          <div className="">
-          <p className="text-sm mt-10">©logo | All rights reserved</p>
+      <div className="container mx-auto  px-6 pt-20">
+        <div className="grid grid-cols-1 max-md:grid-cols-1 md:grid-cols-5 gap-10">
+          {/* Logo and About Section */}
+          <div>
+            <img src="logo.png" alt="Shiny Interiors Logo" className="mb-4" />
+            <p className="text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, doloribus! Fugit sint accusantium ipsam nisi.
+            </p>
+            <div className="flex space-x-4 mt-4">
+              <FaFacebook size={24} />
+              <FaInstagram size={24} />
+              <FaYoutube size={24} />
+              <FaLinkedin size={24} />
+              <FaPhone size={24} />
+            </div>
           </div>
-        </div>
-        </div>
 
-
-        {/* <span className="md:hidden"></span> */}
-       <div className="w-full grid grid-cols-3 max-sm:grid-cols-2 gap-5 py-6 justify-between ">
-       <div className="flex flex-col gap-2   ">
-        <h4 className="text-sm  font-semibold ">Programs</h4>
-            <ul className='text-sm leading-10 items-center	'>
+          {/* Services Area */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Programs</h4>
+            <ul className="space-y-2">
               <li>Educational Guidance</li>
               <li>Skill Development</li>
+              <li>Muzaffarpur</li>
               <li>Scholarship</li>
               <li>Quresh Matrimony</li>
             </ul>
-
-        </div>
-
-        <div className="flex flex-col   ">
-        <h4 className="text-sm font-semibold ">Platform</h4>
-            <ul className='text-sm leading-10	'>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Platform</h4>
+            <ul className="space-y-2">
               <li>Home</li>
               <li>About Us</li>
               <li>Gallery</li>
               <li>Annual Report</li>
               <li>Contact Us</li>
             </ul>
+          </div>
 
-
-
-        </div>
-
-        <div className="flex flex-col gap-2 ">
-        <h4 className=" text-sm font-semibold ">Contact</h4>
-            <ul className=' text-sm leading-10'>
+          {/* Resources */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <ul className="space-y-2">
               <li>New Delhi - 110095</li>
               <li>+91 9876543210</li>
-              <li>conference@gmail.com</li>
+              <li>qureshconference@gmail.com</li>
+              {/* <li>Portfolio</li>
+              <li>FAQs</li>
+              <li>Contact Us</li> */}
             </ul>
+          </div>
 
+          {/* Contact Section */}
+          
+          
         </div>
-       </div>
 
-
+        {/* Footer Bottom */}
+        <div className="border-t border-gray-700 mt-10 pt-6 flex flex-wrap justify-between text-sm">
+          <p>© 2024 Quresh Conference. All rights reserved.</p>
+          <p>
+            <a href="/terms" className="hover:underline">
+              Terms of Service
+            </a>{" "}
+            ·{" "}
+            <a href="/privacy" className="hover:underline">
+              Privacy Policy
+            </a>
+          </p>
+          <p>Designed & Developed by Tryidol Technologies</p>
+        </div>
+        
       </div>
-
-
-
-    </div>
+    </footer>
   );
 };
 

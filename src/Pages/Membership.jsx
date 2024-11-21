@@ -10,11 +10,16 @@ const Membership = () => {
      <div className="p-6 md:px-24 bg-gray-50">
       <div className="text-center">
         <div className="relative w-full  max-w-3xl mx-auto mb-6">
-          <img
+          {/* <img
             src="membership.png" 
             alt="Volunteer"
             className="w-full rounded-lg"
-          />
+          /> */}
+          <video
+                      src=""
+                      controls
+                      className="w-full h-full object-cover"
+                    />
           <button className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
           </button>
         </div>
