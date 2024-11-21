@@ -16,6 +16,7 @@ const Gallery = () => {
       <Navbar />
       <div
         className="w-full min-h-[50vh] md:min-h-[60vh] bg-black bg-center bg-cover flex items-center justify-center"
+        style={{ backgroundImage: `url(gallery.png)` }}
       >
         <div className="text-white text-center">
           <p className="text-sm md:text-base">Home / Gallery</p>

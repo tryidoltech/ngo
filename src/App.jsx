@@ -17,6 +17,7 @@ import ContactUs from './Pages/ContactUs'
 import Gallery from './Pages/Gallery'
 import PhotoGallery from './Pages/gallery/PhotoGallery'
 import Donate from './Pages/Donate'
+import AnnualReports from './Pages/reports/Annual'
 // import Videogallery from './Pages/gallery/Videogallery'
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
      {/* <Route path='gallery/videogallery' element={<Videogallery></Videogallery>}> </Route> */}
      </Route>
      <Route path="/donate" element={<Donate></Donate>}></Route>
+     <Route path="/reports" element={<AnnualReports></AnnualReports>}></Route>
      
     </Routes>
     </>
