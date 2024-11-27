@@ -37,7 +37,7 @@ const ContactUs = () => {
       <Navbar />
       <div>
         <div
-          className="w-full h-[362px] bg-center flex items-center justify-center"
+          className="w-full h-[362px]  bg-center flex items-center justify-center"
           style={{ backgroundImage: `url(governing.png)` }}
         >
           <div className="text-white leading-10 text-center pt-12 w-[600px] h-[200px]">
