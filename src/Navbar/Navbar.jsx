@@ -75,7 +75,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50" onClick={closeDrawer}>
           <div
-            className="w-3/4 h-full bg-white shadow-lg p-4 overflow-y-auto"
+            className="w-3/4 h-full absolute right-0 bg-white shadow-lg p-4 overflow-y-auto"
             onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside the sidebar
           >
             <div className="flex justify-between items-center mb-6">
